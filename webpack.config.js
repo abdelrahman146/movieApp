@@ -5,6 +5,7 @@ const Dotenv = require("dotenv-webpack");
 
 const webpackConfig = (env, { mode }) => {
   const plugins = [
+    new Dotenv(),
     new webpack.ProvidePlugin({
       React: "react",
     }),
@@ -14,11 +15,7 @@ const webpackConfig = (env, { mode }) => {
   ];
 
   if (mode === "development") {
-    plugins.push(new Dotenv(), new webpack.HotModuleReplacementPlugin());
-  }
-
-  if (mode === "production" && !env.netlify) {
-    plugins.push(new Dotenv());
+    plugins.push(new webpack.HotModuleReplacementPlugin());
   }
 
   return {

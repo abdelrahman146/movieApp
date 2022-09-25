@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "build:netlify": "webpack --mode production --env netlify",
+    "build:netlify": "node ./scripts/create-env.js &&  webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
