@@ -5,7 +5,9 @@ const Dotenv = require("dotenv-webpack");
 
 const webpackConfig = (env, { mode }) => {
   const plugins = [
-    new Dotenv(),
+    new Dotenv({
+      systemvars: true,
+    }),
     new webpack.ProvidePlugin({
       React: "react",
     }),
