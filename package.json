@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
+    "serve": "http-server build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -31,6 +32,7 @@
     "@emotion/styled": "^11.10.4",
     "@types/react": "^18.0.20",
     "@types/react-dom": "^18.0.6",
+    "http-server": "^14.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",

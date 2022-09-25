@@ -76,7 +76,6 @@ const Dropdown: FC<{
   const area = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    console.log(defaultValue);
     setLabel(defaultValue);
   }, [defaultValue]);
 
