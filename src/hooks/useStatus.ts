@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-export type Status =
-  | { error: string }
-  | { loading: string }
-  | { success: string }
-  | Record<string, never>;
+export type Status = { error?: string; loading?: string; success?: string };
 
 export const useStatus = () => {
   const [status, setStatus] = useState<Status>({});

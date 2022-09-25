@@ -7,7 +7,7 @@ export const useMoviesList = (): [
   Movie[],
   Status,
   number,
-  React.Dispatch<React.SetStateAction<number>>
+  (genreId: number) => void
 ] => {
   const [genre, setGenre] = useState(0);
   const [list, setList] = useState<Movie[]>([]);
@@ -29,10 +29,6 @@ export const useMoviesList = (): [
       mounted = false;
     };
   }, [genre]);
-
-  useEffect(() => {
-    console.log({ list });
-  }, [list]);
 
   return [list, status, genre, setGenre];
 };
