@@ -24,7 +24,7 @@ export default styled.div`
         width: 40%;
       }
       ${mq.lg} {
-        height: 35vw;
+        height: min(35vw, 30%);
         width: 30%;
       }
     }
